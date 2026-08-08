@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Notes</title>
+    <!-- Import Modern UI Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Notes</h1>
+            <p class="subtitle">Capture your thoughts effortlessly</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <textarea id="note-input" placeholder="What's on your mind today?" rows="3"></textarea>
+                <div class="input-actions">
+                    <button id="add-btn" class="primary-btn">Add Note</button>
+                </div>
+            </div>
+
+            <div class="notes-header">
+                <h2>Recent Notes</h2>
+            </div>
+            
+            <div id="notes-container" class="notes-list">
+                <!-- Notes will be injected here via JavaScript -->
+            </div>
+        </main>
+    </div>
+
+    <!-- The Custom Edit Dialog Box -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <h2>Edit Note</h2>
+            <textarea id="edit-note-input" rows="4"></textarea>
+            <div class="modal-actions">
+                <button id="cancel-edit-btn" class="cancel-btn">Cancel</button>
+                <button id="save-edit-btn" class="primary-btn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
